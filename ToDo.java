@@ -1,10 +1,25 @@
 import java.util.*;
 import java.io.*;
 import javax.swing.*;
+import com.sun.scenario.effect.Effect;
 import java.awt.*;
 
 public class ToDo 
 {
+
+    public void showDisplay()
+    {
+        JFrame frame = new JFrame();
+        frame.setTitle("A Basic To-Do List");
+        frame.setLayout(new BorderLayout());
+        frame.add(mainPanel, BorderLayout.CENTER);
+        frame.setSize(new Dimension(800,650));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setResizeable();
+        frame.setVisible(true);
+    }
+
     public static void main(String[] args)throws IOException
     {
         final int MAX = 10;
@@ -12,6 +27,8 @@ public class ToDo
         int choice = 0;
         boolean exit = false;
         Scanner input = new Scanner(System.in);
+
+    showDisplay();
 
     do
     {
